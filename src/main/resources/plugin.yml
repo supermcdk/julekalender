@@ -1,10 +1,10 @@
-name: SAStore
-version: "1.2.1"
-description: "Modtag betalinger hurtigt og nemt"
-main: hundeklemmen.nikolaialex05.SAStore
+name: SAJulekalender
+version: "1.0.0"
+description: "SuperAwesoem Julekalender 2024"
+main: hundeklemmen.superawesome.Julekalender
 authors: [Hundeklemmen]
-depend: [Skript]
+depend: [WorldEdit]
 commands:
-  sastore:
-    description: Se informationer omkring SA-Store
-    usage: /sastore
+  julekalendersa:
+    description: "Julekalender debug"
+    usage: /julekalendersa

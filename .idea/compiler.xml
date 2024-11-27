@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="julekalender" />
         <module name="SAStore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="julekalender" target="1.8" />
       <module name="SAStore" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -1,4 +1,4 @@
-package hundeklemmen.nikolaialex05;
+package hundeklemmen.superawesome;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.HttpResponse;
@@ -16,6 +16,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 
 import javax.management.*;
+import java.io.File;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.lang.reflect.Field;
@@ -193,4 +194,21 @@ public class Utils {
     public static int getLoadedChunks() { return Bukkit.getWorlds().stream().mapToInt(world -> world.getLoadedChunks().length).sum();}
     public static int getEntities() {return Bukkit.getWorlds().stream().mapToInt(world -> world.getEntities().size()).sum(); }
     public static int getEnabledPlugins(Plugin[] plugins) { return (int) Stream.of(plugins).filter(Plugin::isEnabled).count(); }
+
+    public static boolean isInteger(String arg) {
+        try {
+            Integer.parseInt(arg);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    public static void writeBytesToFile(byte[] schematicData, File tempFile) {
+        try {
+            java.nio.file.Files.write(tempFile.toPath(), schematicData);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
